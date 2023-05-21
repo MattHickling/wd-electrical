@@ -121,6 +121,16 @@ section {
   margin-bottom: 15px;;
 }
 
+.about-para{
+  background-color: white;
+}
+
+.about-para p{
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 #services{
   margin-bottom: 10px;
   box-shadow:  
@@ -371,4 +381,39 @@ nav#navbar.sticky{
 
 #contact a:hover {
   text-decoration: underline;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }

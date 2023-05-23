@@ -11,9 +11,14 @@ body {
 header {
   display: flex;
   background-color: #050b1f;
-  display: flex;
   align-items: center;
   position: relative;
+  justify-content: space-between;
+
+}
+
+img.service-image{
+  width: 60%;
 
 }
 
@@ -23,10 +28,9 @@ section#home{
 }
 
 div.logo{
-  width: 275px;
-  margin-top: 4%;
+  width: 395px;
   margin-left: 2%;
-  padding-bottom: - 10%;
+  margin-bottom: 10px;
 }
 
 .image-container img#lights {
@@ -87,20 +91,48 @@ section#about{
 }
 
 
-nav {
+.menu {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
+
+
+#navbar {
+  display: flex; 
+  align-items: center;
+}
+
+
+.nav-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+
+ul.menu{
+  margin-left: 60rem;
+} 
 
 nav ul {
-  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
-
 nav ul li {
-  display: inline;
-  margin-right: 10px;
+  display: inline-block;
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+nav ul li:first-child {
+  margin-left: 0; /* Remove margin for the first li element */
 }
 
 nav ul li a {
@@ -108,6 +140,14 @@ nav ul li a {
   text-decoration: none;
   padding: 5px 10px;
 }
+
+
+ul.menu{
+  display: flex;
+  justify-content: end;
+ 
+}
+
 
 section {
   padding: 40px;
@@ -206,6 +246,58 @@ ul {
   padding-left: 20px;
 }
 
+
+@media (max-width: 550px) {
+  .logo {
+  display:flex;
+  }
+  label.menu-icon {
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  img.service-image{
+    width: 100%;
+    
+  }
+
+  .menu-icon{
+    background-color: #050b1f;
+  }
+  ul.menu{
+    display: none;
+  }
+
+
+
+}
+
+/* Burger Menu Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+
+.menu {
+  display: none;
+  justify-content: flex-end;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
 /* Adjustments for Mobile Devices */
 @media (max-width: 768px) {
   .logo {
@@ -224,91 +316,42 @@ ul {
   footer {
     padding: 5px;
   }
-}
 
-@media (max-width: 550px) {
-  .logo {
-  display:flex;
-  justify-content: center;
-  }
-  label.menu-icon {
-    cursor: pointer;
-    font-size: 40px;
-    color: #fff;
-    
-  }
-
-  .menu-icon{
-    background-color: #050b1f;
-
-  }
-
-  nav#navbar.sticky{
-    height: 8rem;
-  }
-}
-
-/* Burger Menu Styles */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  margin: 0px 100px;
-  color: #fff;
-}
-
-.menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.menu li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-/* Adjustments for Mobile Devices */
-@media (max-width: 768px) {
-  .logo {
-    justify-content: center;
-    width: 100%;
-  }
-  header {
-    padding: 5px;
-  }
-  nav ul li a {
-    padding: 2px 5px;
-  }
-  section {
-    padding: 20px;
-  }
-  footer {
-    padding: 5px;
-  }
-
-  /* Show/hide burger menu */
   .menu {
     display: none;
   }
+  img.service-image{
+    width: 100%;
+    
+  }
 
-  .menu-icon {
+
+.menu-icon {
     display: inline-block;
+    margin-right: 0;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
   }
 
-  #menu-toggle:checked ~ .menu {
+  .menu {
+    display: none;
+    justify-content: flex-end;
+  }
+
+  .menu li {
     display: block;
+    margin-bottom: 10px;
   }
 
-  #menu-toggle:checked + .menu-icon::before {
-    content: "\2715";
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
   }
 }
+
+
 
 
 
@@ -417,3 +460,5 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+
